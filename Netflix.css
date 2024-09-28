@@ -52,14 +52,22 @@ p{
 }
 
 .main-poster{
-  width: 354px;
-  height: 539px;
+  width: 100%;
+  height: 400px;
   position: relative;
 
 }
-.poster1{
+/*.main-poster img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+*/
+.poster1 {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  transition: opacity 1s ease-in-out;
 }
 .category-bar{
   display: flex;
@@ -70,7 +78,6 @@ p{
   position: fixed;
   top: 45px;
   width: 354px;
-  
   
 }
 
@@ -116,18 +123,53 @@ p{
   height: 20px;
   margin-right: 5px;
 }
-.preview-section{
+.movie , .shows, .anime, .highest-rated-movies, .highest-rated-shows{
   display: flex;
+  justify-content: flex-start;
+  gap: 15px;
   overflow-x: auto;
   white-space: nowrap;
-  padding: 5px;
+  padding: 10px;
+  scroll-behavior: smooth;
+  align-items: center;
+  min-height: 250px;
 }
 .item{
-  height: 200px;
-  width: 100%;
+  height: 100%;
+  width: 150px;
   margin-right: 10px;
-  border-radius: 5px;
+  border-radius: 7px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
+/*.item:hover{
+	transform: scale(1.1);
+	z-index: 1;
+}
+*/
+
+.movie-info{
+	text-align: center;
+	margin-top: 5px;
+}
+
+
+.movie-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for overflowing text */
+  max-width: 100%;
+  display: inline-block;
+}
+
+/*.item img{
+	width: 100%;
+	height: auto;
+}
+*/
 .container{
   margin-top: 20px;
 }
