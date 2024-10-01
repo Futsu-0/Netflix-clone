@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   </head>
   <body>
     <div class="top-dashboard">
@@ -15,8 +20,8 @@
       <img class="netflix-icon" src="Thumbnails/netflix.png">
       </div>
       <div class="right-side">
-      <img class="search-icon" src="Thumbnails/search.png">
-      <img class="user-account-icon" src="Thumbnails/user-account.png">
+      <span class="material-icons search-icon">search</span>
+      <span class="material-icons account-circle">account_circle</span>
       </div>
   <!-- <div class="category-bar">
       <div style="margin-left: 30px">Tv Shows</div>
@@ -26,7 +31,8 @@
     </div>
     
     <div class="main-poster">
-    <img class="poster1" src="" alt="Main Poster" id="mainPoster">
+    <img class="poster1" src="" id="mainPoster">
+    <div class="poster-gradient"></div>
    <!-- main posters will be displayed here-->
    <!--   <div class="main-poster-options">
         <div class="left-section">--
@@ -95,17 +101,21 @@
 
 
   <div class="bottom-dashboard">
-    <div style="margin-left: 20px">
-  <img style="height: 25px; margin-left: 5px "src="Thumbnails/home.png">
-  <p>Home</p>
+    <div class="bottom-dashboard-containers" style="margin-left: 30px">
+  <span class="material-icons home-icon" >home</span>
+  <p style="font-size: 13px; font-weight: 300">Home</p>
   </div>
-  <div>
-  <img  style="height: 25px; margin-left: 25px"src="Thumbnails/download.png">
-  <p>Downloads</p>
+  <div class="bottom-dashboard-containers">
+  <span class="material-icons downloads-icon">download</span>
+  <p style="font-size: 13px; font-weight: 300">Downloads</p>
   </div>
-  <div style="margin-right:20px" id="menuButton">
-  <img  style="height: 25px; margin-left: 5px"src="Thumbnails/menu.png">
-  <p>Menu</p>
+  <div class="bottom-dashboard-containers">
+  	<span class="material-icons format-list-bulleted">format_list_bulleted</span>
+  	<p style="font-size: 13px; font-weight: 300">Watchlist</p>
+  </div>
+  <div class="bottom-dashboard-containers" id="menuButton" style="margin-right: 30px">
+  <span class="material-icons settings-icon">settings</span>
+  <p style="font-size: 13px ;font-weight: 300">Settings</p>
   </div>
 </div>
   <!-- hidden menu overlay-->

@@ -3,7 +3,7 @@ body{
   padding: 0;
   background-color: black;
   color: white;
-  font-family: Lato;
+  font-family: "Afacad Flux"
 }
 p{
   margin: 0;
@@ -20,10 +20,11 @@ p{
   top: 0;
   right: 0;
   left: 0;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.5),transparent);
+  backdrop-filter: blur(1px);
   z-index: 100;
   opacity: 1;
   transition: opacity 0.3s ease-out;
-  width: 354px;
 }
 .left-side{
   display: flex;
@@ -41,20 +42,25 @@ p{
   justify-content: flex-end;
   
 }
-.search-icon{
-  height: 20px;
-  margin-right: 35px;
+.material-icons{
+  font-size: 24px;
+  color: white;
 }
-.user-account-icon{
-  border-radius: 4px;
-  height: 29px;
+.material-icons.search-icon{
+	margin-right: 35px;
+	font-size: 30px;
+	
+}
+.material-icons.account-circle{
   margin-right: 20px;
+  font-size: 30px;
 }
 
 .main-poster{
   width: 100%;
-  height: 400px;
+  height: 450px;
   position: relative;
+  overflow: hidden;
 
 }
 /*.main-poster img{
@@ -66,8 +72,17 @@ p{
 .poster1 {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: opacity 1s ease-in-out;
+}
+.poster-gradient{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 30px;
+	background: linear-gradient(transparent,rgba(0,0,0,0.2),black);
+	backdrop-filter: blur(1px);
 }
 .category-bar{
   display: flex;
@@ -126,19 +141,17 @@ p{
 .movie , .shows, .anime, .highest-rated-movies, .highest-rated-shows{
   display: flex;
   justify-content: flex-start;
-  gap: 15px;
+  align-items: flex-start;
+  gap: 5px;
   overflow-x: auto;
   white-space: nowrap;
   padding: 10px;
   scroll-behavior: smooth;
-  align-items: center;
-  min-height: 250px;
 }
-.item{
-  height: 100%;
-  width: 150px;
-  margin-right: 10px;
-  border-radius: 7px;
+.item {
+  height: auto;
+  width: 125px;
+  border-radius: 5px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -171,25 +184,40 @@ p{
 }
 */
 .container{
-  margin-top: 20px;
+  margin-top: 10px;
+  
 }
 .container-title{
   font-size: 20px;
   font-weight: 600;
   margin-left: 10px;
+  margin-bottom: 5px;
+  
 }
 .bottom-dashboard{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%px;
-  height: 50px;
+  height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: black;
   z-index: 1000;
+  align-items: center;
+  border-top: solid 1px white;
+}
+.bottom-dashboard-containers{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+.material-icons.home-icon,.material-icons.downloads-icon, .material-icons.format-list-bulleted, .material-icons.settings-icon {
+	font-size: 30px;
+	
 }
 
 .menu-container{

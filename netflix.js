@@ -87,7 +87,7 @@ function cycleMainPosters(movies) {
 
     // Move to the next movie, loop back if at the end
     currentIndex = (currentIndex + 1) % movies.length;
-  }, 5000); // Change image every 10 seconds
+  }, 10000); // Change image every 10 seconds
 }
 
 function getMainPosterWithCycle() {
@@ -126,8 +126,8 @@ function getMainPosterWithCycle() {
  	movieElement.classList.add('item')
  	movieElement.innerHTML=`
  <img class="item" src="${IMG_URL}${movie.poster_path}" alt="${movie.title}">
- <div class="movie-info">
-  <p class="movie-title">${movie.title}</p>
+<!-- <div class="movie-info">
+  <p class="movie-title">${movie.title}</p> -->
   </div>
  `;
  container.appendChild(movieElement);
@@ -156,9 +156,9 @@ function getTVShows(url){
  	showElement.classList.add('item')
  	showElement.innerHTML=`
  <img class="item" src="${IMG_URL}${show.poster_path}" alt="${show.name}">
- <div class="movie-info">
+<!-- <div class="movie-info">
   <p class="movie-title">${show.name}</p>
-  </div>
+  </div> -->
  `;
  container.appendChild(showElement);
  	});
@@ -182,9 +182,9 @@ function showAnime(data) {
         animeElement.classList.add('item');
         animeElement.innerHTML = `
             <img class="item" src="${IMG_URL}${poster_path}" alt="${name}">
-            <div class="movie-info">
-                <p class="movie-title">${name}</p>
-            </div>
+            <!--<div class="movie-info">
+                <p class="movie-title">${name}</p> 
+            </div> -->
         `;
         container.appendChild(animeElement);
     });
@@ -211,9 +211,9 @@ function showHighestRatedMovies(data) {
         movieElement.classList.add('item');
         movieElement.innerHTML = `
             <img class="item" src="${IMG_URL}${poster_path}" alt="${title}">
-            <div class="movie-info">
+           <!-- <div class="movie-info">
                 <p class="movie-title">${title}</p>
-            </div>
+            </div> -->
         `;
         container.appendChild(movieElement);
     });
@@ -239,9 +239,9 @@ function showHighestRatedShows(data) {
         showElement.classList.add('item');
         showElement.innerHTML = `
             <img class="item" src="${IMG_URL}${poster_path}" alt="${name}">
-            <div class="movie-info">
+         <!--   <div class="movie-info">
                 <p class="movie-title">${name}</p>
-            </div>
+            </div> -->
         `;
         container.appendChild(showElement);
     });
